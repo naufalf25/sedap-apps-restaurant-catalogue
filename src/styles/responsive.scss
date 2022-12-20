@@ -1,0 +1,248 @@
+$dark: #343F56;
+$red: #F54748;
+$white: #FFF;
+$slate100: #F1F5F9;
+$slate300: #E2E8F0;
+$slate700: #334155;
+$font-title: 'Lilita One', cursive;
+
+@media screen and (max-width: 1200px) {
+  header {
+    hero-header {
+      min-width: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    .inputSearch {
+      #inputQuery {
+        width: 80%;
+      }
+
+      #searchSubmit {
+        width: 10%;
+      }
+    }
+
+    .restaurants {
+      padding: 0 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    hero-header {
+      height: 400px;
+      padding: 2rem;
+
+      .hero__inner {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  main {
+    .restaurants {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .restaurant__detail {
+      padding: 2rem;
+
+      .detail__header {
+        flex-direction: column;
+        justify-content: flex-start;
+
+        img {
+          width: 100%;
+        }
+
+        .detail__headerContent {
+          margin-top: 1rem;
+          width: 100%;
+
+          h2 {
+            font-size: 1.6rem;
+          }
+
+          h3 {
+            font-size: 1.2rem;
+          }
+
+          h4 {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header {
+    position: relative;
+
+    app-bar {
+      padding: 0 1em;
+
+      nav {
+        position: absolute;
+        top: 87px;
+        left: 0;
+        z-index: 80;
+        width: 100%;
+        padding: 2rem 1rem;
+        background: $white;
+        transform: translateX(-100%);
+        transition: all 0.4s ease-in-out;
+
+        ul {
+          li {
+            display: block;
+            margin-left: 0;
+            font-size: 1.2rem;
+            margin-top: 1.8rem;
+            text-align: center;
+
+            &:first-child {
+              margin-top: 0;
+            }
+
+            a {
+              padding: 10px 8px;
+              text-decoration: none;
+              color: $dark;
+              border: none;
+              border-radius: 0;
+              border-bottom: 2px solid transparent;
+
+              &:hover {
+                border: none;
+                border-bottom: 2px solid $dark;
+              }
+            }
+          }
+        }
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+
+    hero-header {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) ,url('../public/images/heros/hero-image_2-small.jpg') no-repeat;
+      height: 350px;
+
+      .hero__inner {
+        h1 {
+          font-size: 2em;
+        }
+
+        p {
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+
+  main {
+    .inputSearch {
+      padding: 0 1rem;
+
+      #inputQuery {
+        width: 100%;
+      }
+
+      #searchSubmit {
+        margin-top: 0.5rem;
+        width: 100%;
+      }
+    }
+
+    .restaurants {
+      padding: 0 1rem;
+      grid-template-columns: 1fr;
+    }
+
+    .restaurant__detail {
+      padding: 2rem 1rem;
+
+      .detail__header {
+        .detail__headerContent {
+          h2 {
+            font-size: 1.5rem;
+          }
+
+          h3 {
+            font-size: 1rem;
+          }
+
+          h4 {
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      .detail__menu {
+        .detail__menuGroup {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .detail__review {
+        .review__post {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+
+          .review__card {
+            h2 {
+              font-size: 1.2rem;
+            }
+
+            .review__sender {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      .detail__addReview {
+        .addReview__form {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 410px) {
+  main {
+    padding: 1rem 0.2rem;
+
+    .restaurants {
+      padding: 0;
+
+      .restaurant__post {
+        margin: 0 auto;
+        width: 95%;
+
+        .restaurant__content {
+          p {
+            width: 18rem;
+          }
+        }
+      }
+    }
+  }
+}
