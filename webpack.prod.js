@@ -2,7 +2,7 @@ const { merge } = require('webpack-merge');
 const path = require('path');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const ImageMinimizerWebpackPlugin = require('image-minimizer-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
@@ -28,7 +28,7 @@ module.exports = merge(common, {
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: './sw.bundle.js',
     }),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
   ],
   optimization: {
     minimizer: [
